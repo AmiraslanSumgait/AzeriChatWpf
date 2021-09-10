@@ -1,0 +1,30 @@
+﻿<Window x:Class="AzeriChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AzeriChat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Image Source="Images/roundlogo.png" Margin="10,15,732,19" Width="40" Height="50"></Image>
+            <TextBlock Padding="10" FontSize="32" Margin="55,10,105,10" >Azerbaijan Chatting App</TextBlock>
+        </Grid>
+        <ListBox FontSize="32" Grid.Row="1">
+            <ListBoxItem Content="Nebi"></ListBoxItem>
+            <ListBoxItem Content="Kenan"></ListBoxItem>
+            <ListBoxItem Content="Hormet"></ListBoxItem>
+            <ListBoxItem Content="Burhan"></ListBoxItem>
+            <ListBoxItem Content="Kamal"></ListBoxItem>
+        </ListBox>
+        <Grid Grid.Row="2">
+            <TextBox FontSize="32"  ></TextBox>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\bin\Debug\AzeriChat.exe.config
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\bin\Debug\AzeriChat.exe
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\bin\Debug\AzeriChat.pdb
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\AzeriChat.csproj.AssemblyReference.cache
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\MainWindow.g.cs
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\App.g.cs
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\AzeriChat_MarkupCompile.cache
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\AzeriChat_MarkupCompile.lref
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\MainWindow.baml
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\AzeriChat.g.resources
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\AzeriChat.Properties.Resources.resources
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\AzeriChat.csproj.GenerateResource.cache
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\AzeriChat.csproj.CoreCompileInputs.cache
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\AzeriChat.exe
+C:\Users\Eliy_lw44\source\repos\AzeriChat\AzeriChat\obj\Debug\AzeriChat.pdb
