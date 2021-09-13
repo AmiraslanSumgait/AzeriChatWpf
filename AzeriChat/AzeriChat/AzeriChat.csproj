@@ -95,10 +95,49 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\roundlogo.png" />
+    <Resource Include="Images\battery.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\sendicon.png" />
+    <Resource Include="Images\battery1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\signal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\signa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\signal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\videoCall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\call %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\nebi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\iosMicrophone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\send.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

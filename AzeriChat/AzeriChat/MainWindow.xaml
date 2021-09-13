@@ -5,26 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AzeriChat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Background="Transparent"  Height="580" Width="340" WindowStyle="None"  WindowStartupLocation="CenterScreen"   AllowsTransparency="True" MouseLeftButtonDown="dragMe" BorderThickness="0"
+>
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
             <RowDefinition Height="6*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid>
-            <Image Source="Images/roundlogo.png" Margin="10,15,732,19" Width="40" Height="50"></Image>
-            <TextBlock Padding="10" FontSize="32" Margin="55,10,105,10" >Azerbaijan Chatting App</TextBlock>
+        <Border  Height="50" CornerRadius="32" BorderThickness="1" BorderBrush="Gray" Background="White">
+        <Grid Grid.Row="0">
+            <Image Source="Images/battery1.jpg" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.56,0.545" Margin="138,3,-138,-3"></Image>
+            <Image Source="Images/wifi.png" Height="16" VerticalAlignment="Top"  Margin="70,3,-138,0" RenderTransformOrigin="0.502,1.062"></Image>
+            <Image Source="Images/signal.png" Height="16" VerticalAlignment="Top"  Margin="70,3,-70,0" RenderTransformOrigin="0.502,1.062"></Image>
+            <Label FontWeight="Bold" FontSize="13">9:41</Label>
         </Grid>
-        <ListBox FontSize="32" Grid.Row="1">
-            <ListBoxItem Content="Nebi"></ListBoxItem>
-            <ListBoxItem Content="Kenan"></ListBoxItem>
-            <ListBoxItem Content="Hormet"></ListBoxItem>
-            <ListBoxItem Content="Burhan"></ListBoxItem>
-            <ListBoxItem Content="Kamal"></ListBoxItem>
-        </ListBox>
-        <Grid Grid.Row="2">
-            <TextBox FontSize="32"  ></TextBox>
+        </Border>
+        <Grid Grid.Row="1" Background="#FF9067F8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="11*"/>
+                <ColumnDefinition Width="23*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="Images/videoCall.png" VerticalAlignment="Top" Width="40" Height="60"  Margin="175,17,15,0" RenderTransformOrigin="0.502,1.062" Grid.Column="1"></Image>
+            <Image Source="Images/call (2).png" VerticalAlignment="Top" Width="40" Height="60"  Margin="115,17,75,0" RenderTransformOrigin="0.502,1.062" Grid.Column="1"></Image>
+            <Image Source="Images/back.png" VerticalAlignment="Top" Width="40" Height="60"  Margin="0,17,70,0" RenderTransformOrigin="0.502,1.062"></Image>
+            <Ellipse Height="50" Width="50" Margin="35,17,25,20">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="Images/nebi.png"></ImageBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock FontSize="20" Margin="85,17,60,0" FontFamily="Dubai Medium" Foreground="White" Grid.ColumnSpan="2">Nebi Nebili</TextBlock>
+            <TextBlock FontSize="20" Margin="85,40,75,0" FontFamily="Dubai Medium" Foreground="#FFB8A9A9" Grid.ColumnSpan="2">Online</TextBlock>
+            <Image Source="Images/online.png"  VerticalAlignment="Top" Width="15" Height="15"  Margin="30,52,185,0" RenderTransformOrigin="0.502,1.062" Grid.Column="1"/>
+        </Grid>
+        <Grid Grid.Row="2" Background="#2A2A2A">
+            <ListBox ></ListBox>
+        </Grid>
+        <Grid Grid.Row="3" Background="White">
+            <Border Width="240" Background="Gray" Height="40" CornerRadius="20" BorderThickness="4" BorderBrush="Gray" Margin="45,46,55,30" >
+                <TextBox Background="Transparent" FontSize="16"  Margin="5" BorderThickness="0"></TextBox>
+            </Border>
+            <Image Source="Images/iosMicrophone.png"  VerticalAlignment="Top" Width="40" Height="40"  Margin="0,46,290,0" />
+            <Button Margin="290,46,10,30" Height="40" Width="40" Background="Bisque" >
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20">
+                <Image  Source="Images/send.png"  VerticalAlignment="Top" Width="50" Height="40"  Margin="285,46,15,0" />
+                </StackPanel>
+            </Button>
+            
         </Grid>
     </Grid>
+
 </Window>

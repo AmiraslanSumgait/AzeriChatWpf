@@ -24,5 +24,16 @@ namespace AzeriChat
         {
             InitializeComponent();
         }
+
+        private void dragMe(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                DragMove();
+            }
+            catch (Exception)
+            {
+            }
+        }
     }
 }
