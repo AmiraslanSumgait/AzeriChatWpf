@@ -23,8 +23,8 @@ namespace AzeriChat
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
         }
-
         private void dragMe(object sender, MouseButtonEventArgs e)
         {
             try
@@ -34,6 +34,14 @@ namespace AzeriChat
             catch (Exception)
             {
             }
+        }
+
+        private void btnSend_Click(object sender, RoutedEventArgs e)
+        {
+           
+            chatList.Items.Add(txtBoxMessage.Text);
+            txtBoxMessage.Clear();
+            chatList.HorizontalAlignment = HorizontalAlignment.Right;
         }
     }
 }

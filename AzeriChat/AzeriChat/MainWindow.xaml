@@ -16,12 +16,12 @@
             <RowDefinition Height="2*"></RowDefinition>
         </Grid.RowDefinitions>
         <Border  Height="50" CornerRadius="32" BorderThickness="1" BorderBrush="Gray" Background="White">
-        <Grid Grid.Row="0">
-            <Image Source="Images/battery1.jpg" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.56,0.545" Margin="138,3,-138,-3"></Image>
-            <Image Source="Images/wifi.png" Height="16" VerticalAlignment="Top"  Margin="70,3,-138,0" RenderTransformOrigin="0.502,1.062"></Image>
-            <Image Source="Images/signal.png" Height="16" VerticalAlignment="Top"  Margin="70,3,-70,0" RenderTransformOrigin="0.502,1.062"></Image>
-            <Label FontWeight="Bold" FontSize="13">9:41</Label>
-        </Grid>
+            <Grid Grid.Row="0">
+                <Image Source="Images/battery1.jpg" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.56,0.545" Margin="138,3,-138,-3"></Image>
+                <Image Source="Images/wifi.png" Height="16" VerticalAlignment="Top"  Margin="70,3,-138,0" RenderTransformOrigin="0.502,1.062"></Image>
+                <Image Source="Images/signal.png" Height="16" VerticalAlignment="Top"  Margin="70,3,-70,0" RenderTransformOrigin="0.502,1.062"></Image>
+                <Label FontWeight="Bold" FontSize="13">9:41</Label>
+            </Grid>
         </Border>
         <Grid Grid.Row="1" Background="#FF9067F8">
             <Grid.ColumnDefinitions>
@@ -41,20 +41,23 @@
             <Image Source="Images/online.png"  VerticalAlignment="Top" Width="15" Height="15"  Margin="30,52,185,0" RenderTransformOrigin="0.502,1.062" Grid.Column="1"/>
         </Grid>
         <Grid Grid.Row="2" Background="#2A2A2A">
-            <ListBox ></ListBox>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListBox FontSize="24" x:Name="chatList"  >
+            </ListBox>
         </Grid>
         <Grid Grid.Row="3" Background="White">
             <Border Width="240" Background="Gray" Height="40" CornerRadius="20" BorderThickness="4" BorderBrush="Gray" Margin="45,46,55,30" >
-                <TextBox Background="Transparent" FontSize="16"  Margin="5" BorderThickness="0"></TextBox>
+                <TextBox x:Name="txtBoxMessage"    Background="Transparent" FontSize="16"  Margin="5" BorderThickness="0"></TextBox>
             </Border>
             <Image Source="Images/iosMicrophone.png"  VerticalAlignment="Top" Width="40" Height="40"  Margin="0,46,290,0" />
-            <Button Margin="290,46,10,30" Height="40" Width="40" Background="Bisque" >
-                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20">
-                <Image  Source="Images/send.png"  VerticalAlignment="Top" Width="50" Height="40"  Margin="285,46,15,0" />
-                </StackPanel>
+            <Button Click="btnSend_Click" x:Name="btnSend"  Margin="290,46,10,30" Height="40" BorderThickness="0" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/send.png"></ImageBrush>
+                </Button.Background>
             </Button>
-            
         </Grid>
     </Grid>
-
 </Window>
