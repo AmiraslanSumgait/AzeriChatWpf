@@ -33,20 +33,20 @@
             <Image Source="Images/back.png" VerticalAlignment="Top" Width="40" Height="60"  Margin="0,17,70,0" RenderTransformOrigin="0.502,1.062"></Image>
             <Ellipse Height="50" Width="50" Margin="35,17,25,20">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="Images/nebi.png"></ImageBrush>
+                    <ImageBrush ImageSource="Images/nebi1.png"></ImageBrush>
                 </Ellipse.Fill>
             </Ellipse>
             <TextBlock FontSize="20" Margin="85,17,60,0" FontFamily="Dubai Medium" Foreground="White" Grid.ColumnSpan="2">Nebi Nebili</TextBlock>
             <TextBlock FontSize="20" Margin="85,40,75,0" FontFamily="Dubai Medium" Foreground="#FFB8A9A9" Grid.ColumnSpan="2">Online</TextBlock>
             <Image Source="Images/online.png"  VerticalAlignment="Top" Width="15" Height="15"  Margin="30,52,185,0" RenderTransformOrigin="0.502,1.062" Grid.Column="1"/>
         </Grid>
-        <Grid Grid.Row="2" Background="#2A2A2A">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <ListBox FontSize="24" x:Name="chatList"  >
+        <Grid Grid.Row="2" Background="White">
+            <ListBox FontSize="24" x:Name="chatList" BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <Border  x:Name="border"  Width="120" Height="60">
+                    <TextBlock></TextBlock>
+                </Border>
             </ListBox>
+
         </Grid>
         <Grid Grid.Row="3" Background="White">
             <Border Width="240" Background="Gray" Height="40" CornerRadius="20" BorderThickness="4" BorderBrush="Gray" Margin="45,46,55,30" >

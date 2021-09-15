@@ -35,13 +35,47 @@ namespace AzeriChat
             {
             }
         }
+        static public string GetResponseRandom()
+        {
+            List<string> randowRequests = new List<string>
+            {
+                "Adam kisi olar","Davay ged yat","Qesey oprem","Adam kimi danis","Ozune hormet elemiyenden day ne gozduyesen"
+            };
 
+            Random random = new Random();
+            int index = random.Next(randowRequests.Count);
+            return randowRequests[index];
+
+        }
+
+        BrushConverter bc = new BrushConverter();
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
-           
-            chatList.Items.Add(txtBoxMessage.Text);
+
+            TextBlock textBlock = new TextBlock()
+            {
+                Margin = new Thickness(230, 0, 0, 0),
+                Text = txtBoxMessage.Text,
+                TextAlignment = TextAlignment.Center,
+                FontSize = 20,
+                TextWrapping = TextWrapping.Wrap,
+                Background = (Brush)bc.ConvertFrom("#FF9067F8"),
+            };
+            TextBlock textBlock1 = new TextBlock()
+            {
+                Margin = new Thickness(5),
+                Text = GetResponseRandom(),
+                TextAlignment = TextAlignment.Left,
+                FontSize = 20,
+                TextWrapping = TextWrapping.Wrap,
+                Background = (Brush)bc.ConvertFrom("#FFFFFF"),
+                Foreground = (Brush)bc.ConvertFrom("#000000")
+            };
+
+            chatList.Items.Add(textBlock);
+            chatList.Items.Add(textBlock1);
             txtBoxMessage.Clear();
-            chatList.HorizontalAlignment = HorizontalAlignment.Right;
+
         }
     }
 }
