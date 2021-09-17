@@ -20,7 +20,7 @@
                 <Image Source="Images/battery1.jpg" Height="22" VerticalAlignment="Top" RenderTransformOrigin="0.56,0.545" Margin="138,3,-138,-3"></Image>
                 <Image Source="Images/wifi.png" Height="16" VerticalAlignment="Top"  Margin="70,3,-138,0" RenderTransformOrigin="0.502,1.062"></Image>
                 <Image Source="Images/signal.png" Height="16" VerticalAlignment="Top"  Margin="70,3,-70,0" RenderTransformOrigin="0.502,1.062"></Image>
-                <Label FontWeight="Bold" FontSize="13">9:41</Label>
+                <Label Name="lblTime" FontWeight="Bold" FontSize="13"></Label>
             </Grid>
         </Border>
         <Grid Grid.Row="1" Background="#FF9067F8">
@@ -36,7 +36,7 @@
                     <ImageBrush ImageSource="Images/nebi1.png"></ImageBrush>
                 </Ellipse.Fill>
             </Ellipse>
-            <TextBlock FontSize="20" Margin="85,17,60,0" FontFamily="Dubai Medium" Foreground="White" Grid.ColumnSpan="2">Nebi Nebili</TextBlock>
+            <TextBlock FontSize="20" Margin="85,17,60,0" FontFamily="Dubai Medium" Foreground="White" Grid.ColumnSpan="2">Nəbi Nəbili</TextBlock>
             <TextBlock FontSize="20" Margin="85,40,75,0" FontFamily="Dubai Medium" Foreground="#FFB8A9A9" Grid.ColumnSpan="2">Online</TextBlock>
             <Image Source="Images/online.png"  VerticalAlignment="Top" Width="15" Height="15"  Margin="30,52,185,0" RenderTransformOrigin="0.502,1.062" Grid.Column="1"/>
         </Grid>
@@ -50,14 +50,34 @@
         </Grid>
         <Grid Grid.Row="3" Background="White">
             <Border Width="240" Background="Gray" Height="40" CornerRadius="20" BorderThickness="4" BorderBrush="Gray" Margin="45,46,55,30" >
-                <TextBox x:Name="txtBoxMessage"    Background="Transparent" FontSize="16"  Margin="5" BorderThickness="0"></TextBox>
+                <TextBox x:Name="txtBoxMessage"  Cursor="Hand"  Background="Transparent" FontSize="16"  Margin="5,5,5,6" BorderThickness="0"></TextBox>
             </Border>
             <Image Source="Images/iosMicrophone.png"  VerticalAlignment="Top" Width="40" Height="40"  Margin="0,46,290,0" />
             <Button Click="btnSend_Click" x:Name="btnSend"  Margin="290,46,10,30" Height="40" BorderThickness="0" >
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="Green"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="DarkGoldenrod"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
                 <Button.Background>
                     <ImageBrush ImageSource="Images/send.png"></ImageBrush>
                 </Button.Background>
             </Button>
         </Grid>
+       
     </Grid>
 </Window>

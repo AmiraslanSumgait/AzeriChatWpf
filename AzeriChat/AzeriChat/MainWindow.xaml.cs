@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,6 +26,11 @@ namespace AzeriChat
         {
             InitializeComponent();
             DataContext = this;
+            string time = DateTime.Now.Minute.ToString();
+            DateTime date = DateTime.Now;
+            string formattedDate = date.ToString("HH:mm");
+            lblTime.Content = formattedDate;
+            
         }
         private void dragMe(object sender, MouseButtonEventArgs e)
         {
@@ -39,8 +46,9 @@ namespace AzeriChat
         {
             List<string> randowRequests = new List<string>
             {
-                "Adam kisi olar","Davay ged yat","Qesey oprem","Adam kimi danis","Ozune hormet elemiyenden day ne gozduyesen"
-            };
+                "Deyirler yalan danismaq olmaz dogrunuda deyende xetirlerine dəyir!","Sevmək bu qədər gözəlsə, kim bilir sevməyi yaradan nə qədər gözəldir","İnsanlar əylənə bildikləri ilə yoldaş,paylaşa bildikləri ilə dost,ağlaya bildikləri ilə qardaş olurlar","Biz qardaş dediyimiz insanlar üçün ölməyədə gedərik gömməyədə."
+                ,
+             };
 
             Random random = new Random();
             int index = random.Next(randowRequests.Count);
@@ -49,32 +57,34 @@ namespace AzeriChat
         }
 
         BrushConverter bc = new BrushConverter();
+        public int Count { get; set; } = 0;
+
+        private void message()
+        {
+            UserControl1 userControl1 = new UserControl1();
+            userControl1.Border.Background = (Brush)bc.ConvertFrom("#E3E7D3");
+            chatList.HorizontalAlignment = HorizontalAlignment.Left;
+            userControl1.DataText.Text = GetResponseRandom();
+            userControl1.DataText.FontSize = 15;
+            userControl1.Border.Margin = new Thickness(10,40,0,0);
+            chatList.Items.Add(userControl1);
+
+        }
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
-
-            TextBlock textBlock = new TextBlock()
-            {
-                Margin = new Thickness(230, 0, 0, 0),
-                Text = txtBoxMessage.Text,
-                TextAlignment = TextAlignment.Center,
-                FontSize = 20,
-                TextWrapping = TextWrapping.Wrap,
-                Background = (Brush)bc.ConvertFrom("#FF9067F8"),
-            };
-            TextBlock textBlock1 = new TextBlock()
-            {
-                Margin = new Thickness(5),
-                Text = GetResponseRandom(),
-                TextAlignment = TextAlignment.Left,
-                FontSize = 20,
-                TextWrapping = TextWrapping.Wrap,
-                Background = (Brush)bc.ConvertFrom("#FFFFFF"),
-                Foreground = (Brush)bc.ConvertFrom("#000000")
-            };
-
-            chatList.Items.Add(textBlock);
-            chatList.Items.Add(textBlock1);
+          
+            UserControl1 userControl = new UserControl1();
+            userControl.DataText.Text = txtBoxMessage.Text;
+            userControl.DataText.FontSize = 15;
+            chatList.HorizontalAlignment = HorizontalAlignment.Right;
+            userControl.Border.Margin = new Thickness(250,20,0,0);
+            chatList.Items.Add(userControl);
             txtBoxMessage.Clear();
+            message();
+
+
+
+
 
         }
     }

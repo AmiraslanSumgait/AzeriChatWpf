@@ -23,6 +23,13 @@ namespace AzeriChat
         public UserControl1()
         {
             InitializeComponent();
+            string time = DateTime.Now.Minute.ToString();
+            DateTime date = DateTime.Now;
+            string formattedDate = date.ToString("HH:mm");
+            //TimeText.Text = DateTime.Now.Hour.ToString();
+            //TimeText.Text += ":";
+            //TimeText.Text += DateTime.Now.Minute.ToString();
+            TimeText.Text = formattedDate;
         }
     }
 }

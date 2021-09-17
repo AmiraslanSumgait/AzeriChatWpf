@@ -28,3 +28,5 @@ C:\Users\Amiraslan\Source\Repos\AzeriChat\AzeriChat\AzeriChat\obj\Debug\AzeriCha
 C:\Users\Amiraslan\Source\Repos\AzeriChat\AzeriChat\AzeriChat\obj\Debug\AzeriChat.csproj.CoreCompileInputs.cache
 C:\Users\Amiraslan\Source\Repos\AzeriChat\AzeriChat\AzeriChat\obj\Debug\AzeriChat.exe
 C:\Users\Amiraslan\Source\Repos\AzeriChat\AzeriChat\AzeriChat\obj\Debug\AzeriChat.pdb
+C:\Users\Amiraslan\Source\Repos\AzeriChat\AzeriChat\AzeriChat\obj\Debug\UserControl1.g.cs
+C:\Users\Amiraslan\Source\Repos\AzeriChat\AzeriChat\AzeriChat\obj\Debug\UserControl1.baml
